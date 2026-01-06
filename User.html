@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telkom Medika</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Landing.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+    <body>
+<header>
+    <img src="Logo.png" width="50px" alt="Logo Telkom Medika" class="logo">
+    <div class="Judul1">
+        <h2 style="color:#5b645b;">Telkom</h2>
+        <h2 style="color:#bf0b0b;font-weight:700;">Medika</h2>
+    </div>
+    <div class="Navbar" >
+    <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#layanan-conten">Layanan</a></li>
+        <li><a href="#dokter">Dokter</a></li>
+        <li><a href="#reservasi">Reservasi</a></li>
+        <li><a href="Landing.html"><button class="login-btn">3PMB</button></a></li>
+    </ul>
+    </div>
+</header>
+    <div class="login-wrapper" id="loginWrapper">
+
+        <div class="overlay" onclick="closeLogin()"></div>
+
+        <div class="modal">
+            
+            <div id="loginForm">
+                <h2>Login</h2>
+
+                <select>
+                    <option>Pengguna</option>
+                    <option>Admin</option>
+                </select>
+
+                <input type="text" placeholder="Masukkan Username">
+                <input type="password" placeholder="Masukkan Password">
+
+                <a href="Admin.html"><button class="btn-primary">Login</button></a>
+                <button class="btn-secondary" onclick="showRegister()">Registrasi</button>
+            </div>
+
+            <div id="registerForm" class="hidden">
+                <h2>Registrasi</h2>
+
+                <input type="text" placeholder="Nama Lengkap">
+                <input type="text" placeholder="Username">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Konfirmasi Password">
+
+                <button class="btn-primary">Daftar</button>
+                <button class="btn-secondary" onclick="showLogin()">Kembali ke Login</button>
+            </div>
+        </div>
+
+    </div>
+
+<section class="hero">
+    <div>
+        <p class="hero-title1">Telkom</p>
+        <p class="hero-title2">Medika</p>
+    </div>
+    <img src="LogoTelkom.png">
+</section>
+
+    <div class="info-wrapper">
+        <div class="info-card">
+            <h3>Jam Pelayanan</h3>
+            Gawat Darurat: 24 Jam<br>Rawat Jalan: Senin–Sabtu 07.00–21.00 WIB
+        </div>
+        <div class="info-card">
+            <h3>Gawat Darurat</h3>
+            Kami siap melayani kebutuhan darurat medis 24 jam penuh.
+        </div>
+        <div class="info-card">
+            <h3>Rawat Inap</h3>
+            Kami menyediakan fasilitas rawat inap dengan kenyamanan terbaik.
+        </div>
+        <div class="info-card">
+            <h3>Rawat Jalan</h3>
+            Layanan rawat jalan tersedia setiap hari kerja dengan jadwal fleksibel.
+        </div>
+        <div class="info-card">
+            <h3>Buat Reservasi</h3>
+            <button class="btn" onclick="location.href='#reservasi'">Reservasi Sekarang</button>
+        </div>
+    </div>
+    <div id="layanan-conten" class="layanan-container">
+    <aside class="sidebar">
+        <h2>Layanan Kami</h2>
+        <div class="menu-item active" onclick="pilihLayanan('umum', this)">Perawatan Umum</div>
+        <div class="menu-item" onclick="pilihLayanan('mata', this)">Pemeriksaan Mata</div>
+        <div class="menu-item" onclick="pilihLayanan('gigi', this)">Pengobatan Gigi</div>
+        <div class="menu-item" onclick="pilihLayanan('darurat', this)">Perawatan Gawat Darurat</div>
+        <div class="menu-item" onclick="pilihLayanan('jalan', this)">Rawat Jalan</div>
+        <div class="menu-item" onclick="pilihLayanan('inap', this)">Rawat Inap</div>
+        <div class="menu-item" onclick="pilihLayanan('apotik', this)">Apotik</div>
+    </aside>-
+
+    <div class="content-area" style="flex: 1;">
+        <div id="umum" class="news-card service-content">
+            <div class="news-image">
+                <img src="P1.jpg">
+                <div class="category-badge">Perawatan Umum</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Telkom Medika - Perawatan Umum</h2>
+                <p class="news-description">Kami menyediakan perawatan umum untuk mahasiswa Telkom University agar mahasiswa dapat berobat dengan mudah.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+            </div>
+        </div>
+
+        <div id="mata" class="news-card service-content" style="display:none;">
+            <div class="news-image">
+                <img src="P2.png"> <div class="category-badge">Pemeriksaan Mata</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Layanan Kesehatan Mata</h2>
+                <p class="news-description">Pemeriksaan mata lengkap, cek minus/plus, dan konsultasi kesehatan mata profesional.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+            </div>
+        </div>
+
+        <div id="gigi" class="news-card service-content" style="display:none;">
+            <div class="news-image">
+                <img src="P3.png">
+                <div class="category-badge">Pengobatan Gigi</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Klinik Gigi & Mulut</h2>
+                <p class="news-description">Melayani pembersihan karang gigi, penambalan, dan perawatan gigi rutin lainnya.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+            </div>
+        </div>
+
+        <div id="darurat" class="news-card service-content" style="display:none;">
+            <div class="news-image">
+                <img src="P4.png">
+                <div class="category-badge">Perawatan Gawat Darurat</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">IGD 24 Jam</h2>
+                <p class="news-description">Layanan darurat medis cepat tanggap yang tersedia selama 24 jam penuh.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+            </div>
+        </div>
+
+        <div id="jalan" class="news-card service-content" style="display:none;">
+            <div class="news-image">
+                <img src="P5.png">
+                <div class="category-badge">Rawat Jalan</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Poliklinik Rawat Jalan</h2>
+                <p class="news-description">Layanan konsultasi kesehatan harian tanpa perlu menginap dengan jadwal yang fleksibel.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+            </div>
+        </div>
+
+        <div id="inap" class="news-card service-content" style="display:none;">
+            <div class="news-image">
+                <img src="P6.png">
+                <div class="category-badge">Rawat Inap</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Fasilitas Rawat Inap</h2>
+                <p class="news-description">Fasilitas perawatan intensif dengan kenyamanan terbaik untuk proses pemulihan pasien.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+            </div>
+        </div>
+
+        <div id="apotik" class="news-card service-content" style="display:none;">
+            <div class="news-image">
+                <img src="P7.png">
+                <div class="category-badge">Apotik</div>
+            </div>
+            <div class="news-content">
+                <h2 class="news-title">Farmasi & Apotik</h2>
+                <p class="news-description">Ketersediaan obat-obatan lengkap sesuai resep dokter untuk kesembuhan pasien.</p>
+                <div class="news-footer"><span class="news-date">25 Des 2025</span><a href="#" class="read-more">Baca Selengkapnya →</a></div>
+                <div class="upload-section">
+                    <h3 style="text-align: center; margin-top: 50px;">Deteksi Jenis Obat</h3>
+                    <img style="width: 100px; margin-left: 425px; margin-top: 50px;" src="Up.png" alt="UpFoto">
+                    
+                        <p style="text-align: center; margin-top: 50px;">Klik untuk mengunggah foto obat</p>
+
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+    <section id="dokter">
+        <div class="dokter-container">
+            <h2>Dokter Telkom Medika</h2>
+        </div>
+        <div class="container">
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="D1.png" alt="Teknologi">
+                    <div class="category-badge">Dokter Umum</div>
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">dr. Adiah Desti</h2>
+                    <p class="news-description">Jam Praktek </p>
+                    <p class="news-description">Rabu: 07.00 - 15.00 WIB</p>
+                    <div class="news-footer">
+                        <span class="news-date">21 Des 2025</span>
+                        <a href="#" class="read-more">Hubungi Dokter →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="D2.png" alt="Bisnis">
+                    <div class="category-badge">Dokter Umum</div>
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">dr. Rizky Regia</h2>
+                    <p class="news-description">Jam Praktek </p>
+                    <p class="news-description">Senin, Selasa, Kamis: 07.00 - 07.00 WIB</p>
+                    <p class="news-description">Sabtu: 07.00 - 21.00 WIB</p>
+                    <div class="news-footer">
+                        <span class="news-date">20 Des 2025</span>
+                        <a href="#" class="read-more">Hubungi Dokter →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="D3.png" alt="Olahraga">
+                    <div class="category-badge">Dokter Umum</div>
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">dr. Achmad N</h2>
+                    <p class="news-description">Jumat: 15.00 - 07.00 WIB</p>
+                    <p class="news-description">Minggu: 15.00 - 07.00 WIB</p>
+                    <div class="news-footer">
+                        <span class="news-date">19 Des 2025</span>
+                        <a href="#" class="read-more">Hubungi Dokter →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="D4.png" alt="Kesehatan">
+                    <div class="category-badge">Dokter Umum</div>
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">dr. Faizah</h2>
+                    <p class="news-description">Rabu: 15.00 - 21.00 WIB</p>
+                    <p class="news-description">Sabtu: 21.00 - 07.00 WIB</p>
+                    <p class="news-description">Minggu : 07.00 - 21.00 WIB</p>
+                    <div class="news-footer">
+                        <span class="news-date">18 Des 2025</span>
+                        <a href="#" class="read-more">HUbungi Dokter →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="D5.png" alt="Lingkungan">
+                    <div class="category-badge">Dokter Umum</div>
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">dr. Nandika Larasati</h2>
+                    <p class="news-description">Senin - Minggu: 21.00 - 07.00 WIB</p>
+                    <div class="news-footer">
+                        <span class="news-date">17 Des 2025</span>
+                        <a href="#" class="read-more">Hubungi Dokter →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="LogoTelkom.png" alt="Hiburan">
+                    <div class="category-badge">Sejarah Telkom Medika</div>
+                </div>
+                <div class="news-content">
+                    <h2 class="news-title">Visi Misi Telkom Medika</h2>
+                    <p class="news-description">Kami menyediakan rumah sakit gratis bagi semua mahasiswa/mahasiswa Telkom University</p>
+                    <div class="news-footer">
+                        <span class="news-date">16 Des 2025</span>
+                        <a href="#" class="read-more">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+<section id="reservasi" class="reservasi-section">
+    <div class="container">
+        <h2 style="text-align: center; margin-top: 50px;">Buat Reservasi Janji Temu</h2>
+        <form class="reservasi-form">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" required placeholder="Masukkan nama lengkap Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="nim">NIM (jika mahasiswa Telkom)</label>
+                <input type="text" id="nim" placeholder="Opsional">
+            </div>
+
+            <div class="form-group">
+                <label for="dokter">Pilih Dokter</label>
+                <select id="dokter" required>
+                    <option value="">-- Pilih Dokter --</option>
+                    <option value="adiah">dr. Adiah Desti</option>
+                    <option value="rizky">dr. Rizky Regia</option>
+                    <option value="achmad">dr. Achmad N</option>
+                    <option value="faizah">dr. Faizah</option>
+                    <option value="nandika">dr. Nandika Larasati</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="layanan">Jenis Layanan</label>
+                <select id="layanan" required>
+                    <option value="">-- Pilih Layanan --</option>
+                    <option value="umum">Perawatan Umum</option>
+                    <option value="mata">Pemeriksaan Mata</option>
+                    <option value="gigi">Pengobatan Gigi</option>
+                    <option value="darurat">Gawat Darurat (khusus darurat)</option>
+                    <option value="jalan">Rawat Jalan</option>
+                    <option value="inap">Rawat Inap</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Janji Temu</label>
+                <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="form-group">
+                <label for="jam">Jam Janji Temu</label>
+                <select id="jam" required>
+                    <option value="">-- Pilih Jam --</option>
+                    <option value="08:00">08:00 WIB</option>
+                    <option value="09:00">09:00 WIB</option>
+                    <option value="10:00">10:00 WIB</option>
+                    <option value="11:00">11:00 WIB</option>
+                    <option value="13:00">13:00 WIB</option>
+                    <option value="14:00">14:00 WIB</option>
+                    <option value="15:00">15:00 WIB</option>
+                    <option value="16:00">16:00 WIB</option>
+                </select>
+            </div>
+
+
+            <button type="submit" class="btn-primary" style="width: 100%; padding: 15px; font-size: 18px;">Kirim Reservasi</button>
+        </form>
+        <p style="text-align: center; margin-top: 20px; color: #666;">*Reservasi akan dikonfirmasi melalui email atau nomor telepon yang terdaftar.</p>
+    </div>
+</section>
+    <footer>
+        © 2025 Telkom Medika — All Rights Reserved
+    </footer>
+
+    <script src="User.js"></script>
+    </body>
+</html>
