@@ -82,26 +82,24 @@
     <h1 class="section-title">Kelola Reservasi Pasien</h1>
     <p class="subtitle">Manajemen pendaftaran pasien (Mahasiswa, Staf, & Umum).</p>
 
-    <div class="filter-bar-admin">
-        <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Cari Nama / ID (NIM/NIP/NIK)...">
+<div class="filter-bar-admin">
+    <div class="search-box">
         </div>
-        <div class="filter-options">
-            <select>
-                <option value="">Semua Kategori</option>
-                <option value="mhs">Mahasiswa</option>
-                <option value="staf">Dosen/Staf</option>
-                <option value="umum">Umum</option>
-            </select>
-            <select>
-                <option value="">Semua Dokter</option>
-                <option value="achmad">dr. Achmad N</option>
-                <option value="rizky">dr. Rizky Regia</option>
-            </select>
-            <button class="action-btn" style="background:#bf0b0b">Terapkan</button>
-        </div>
+    <div class="filter-options">
+        <select id="filterKategori">
+            <option value="">Semua Kategori</option>
+            <option value="Mahasiswa">Mahasiswa</option>
+            <option value="Dosen/Staf">Dosen/Staf</option>
+            <option value="Umum">Umum</option>
+        </select>
+        <select id="filterNamaDokter">
+            <option value="">Semua Dokter</option>
+            <option value="dr. Achmad N">dr. Achmad N</option>
+            <option value="dr. Rizky Regia">dr. Rizky Regia</option>
+        </select>
+        <button class="action-btn" style="background:#d60f0f" onclick="filterReservasi()">Terapkan</button>
     </div>
+</div>
 
     <div class="data-table-section">
         <table>

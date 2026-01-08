@@ -143,3 +143,45 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
+function filterTable() {
+    let namaCari = document.getElementById("searchName").value.toLowerCase();
+    let statusCari = document.getElementById("filterStatus").value;
+    
+    let rows = document.querySelectorAll("#reservasi tbody tr");
+
+    rows.forEach(row => {
+        let namaTabel = row.cells[2].textContent.toLowerCase();
+        let statusTabel = row.cells[4].textContent.trim();
+
+        let cocokNama = namaTabel.includes(namaCari);
+        let cocokStatus = (statusCari === "Semua" || statusTabel === statusCari);
+
+        if (cocokNama && cocokStatus) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+}
+
+function filterReservasi() {
+    let kategori = document.getElementById("filterKategori").value;
+    let dokter = document.getElementById("filterNamaDokter").value;
+    
+    let rows = document.querySelectorAll("#reservasi tbody tr");
+
+    rows.forEach(row => {
+        let teksKategori = row.cells[1].textContent; 
+        let teksDokter = row.cells[3].textContent;
+
+        let matchKategori = (kategori === "" || teksKategori.includes(kategori));
+        let matchDokter = (dokter === "" || teksDokter.includes(dokter));
+
+        if (matchKategori && matchDokter) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+}
